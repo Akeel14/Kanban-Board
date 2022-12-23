@@ -13,6 +13,28 @@
   }
 }
 
+@media (min-width: 768px) {
+  .swimlane {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .swimlane {
+    width: 500
+  }
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
