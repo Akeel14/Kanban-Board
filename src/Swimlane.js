@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  SwimlaneContainer,
-  Title,
-  RemoveButton,
-  Tasks,
-  Task,
-} from "./SwimlaneStyles";
+import { SwimlaneContainer, Title, RemoveButton, Tasks, Task } from "./Styles";
 
 function Swimlane(props) {
   const [title, setTitle] = useState(props.title);

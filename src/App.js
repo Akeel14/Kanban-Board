@@ -1,32 +1,31 @@
 import React, { useState } from "react";
 import Swimlane from "./Swimlane";
-import { Swimlanes, NewSwimlaneContainer } from "./SwimlaneStyles";
+import {Container, Swimlanes, NewSwimlaneContainer } from "./Styles";
+import Sidebar from "./Sidebar";
+
 
 const defaultSwimlanes = [
+  
   {
     id: 1,
-    title: 'Backlog',
+    title: "To Do",
     tasks: [],
   },
   {
     id: 2,
-    title: 'To Do',
+    title: "Doing",
     tasks: [],
   },
   {
     id: 3,
-    title: 'Doing',
-    tasks: [],
-  },
-  {
-    id: 4,
-    title: 'Done',
+    title: "Done",
     tasks: [],
   },
 ];
 
 function App() {
   const [swimlanes, setSwimlanes] = useState(defaultSwimlanes);
+
   const [showNewSwimlaneInput, setShowNewSwimlaneInput] = useState(false);
 
   function addSwimlane(title) {
@@ -59,32 +58,36 @@ function App() {
 
   return (
     <div className="app">
-      <Swimlanes className="swimlanes">
-        {swimlanes.map((swimlane) => (
-          <Swimlane
-            key={swimlane.id}
-            title={swimlane.title}
-            tasks={swimlane.tasks}
-            onDelete={() => deleteSwimlane(swimlane.id)}
-            onUpdate={(newTitle) => updateSwimlaneTitle(swimlane.id, newTitle)}
-          />
-        ))}
-        {showNewSwimlaneInput ? (
-          <NewSwimlaneContainer>
-            <input
-              type="text"
-              placeholder="Enter swimlane title"
-              onKeyDown={handleNewSwimlaneInputKeyPress}
+      <Container>
+        <Sidebar />
+        <Swimlanes>
+          {swimlanes.map((swimlane) => (
+            <Swimlane
+              key={swimlane.id}
+              title={swimlane.title}
+              tasks={swimlane.tasks}
+              onDelete={() => deleteSwimlane(swimlane.id)}
+              onUpdate={(newTitle) => updateSwimlaneTitle(swimlane.id, newTitle)}
             />
-          </NewSwimlaneContainer>
-        ) : (
-          <NewSwimlaneContainer onClick={handleNewSwimlaneClick}>
-            Click to add new swimlane
-          </NewSwimlaneContainer>
-        )}
-      </Swimlanes>
+          ))}
+          {showNewSwimlaneInput ? (
+            <NewSwimlaneContainer>
+              <input
+                type="text"
+                placeholder="Enter swimlane title"
+                onKeyDown={handleNewSwimlaneInputKeyPress}
+              />
+            </NewSwimlaneContainer>
+          ) : (
+            <NewSwimlaneContainer onClick={handleNewSwimlaneClick}>
+              Click to add new swimlane
+            </NewSwimlaneContainer>
+          )}
+        </Swimlanes>
+      </Container>
     </div>
   );
+  
 }
 
 export default App;
