@@ -3,12 +3,12 @@ import styled from "styled-components";
 export const App = styled.div`
   display: flex;
   position: relative;
-  height: 100%; /* Add this line */
+  height: 100%;
 `;
 
 export const Swimlanes = styled.div`
   display: flex;
-  margin-left: 200px; /* Add this line */
+  margin-left: 200px;
   position: absolute;
   left: 200px;
   top: 0;
@@ -50,38 +50,39 @@ export const SearchBar = styled.div`
     cursor: pointer;
   }
 `;
-
 export const StickyNotes = styled.div`
   margin-top: 20px;
   .blank-sticky-note {
     width: 100%;
     display: flex;
     align-items: center;
-    input {
-      width: 80%;
-      height: 35px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 0 10px;
-      margin-right: 10px;
-    }
-    button {
-      width: 20%;
-      height: 35px;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      font-size: 14px;
-      cursor: pointer;
-    }
+  }
+  .sticky-note {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .yellow {
+    background-color: #ffd600;
+  }
+  .green {
+    background-color: #4caf50;
+  }
+  .red {
+    background-color: #f44336;
+  }
+  .purple {
+    background-color: #9c27b0;
   }
 `;
 
 export const Filter = styled.div`
   margin-top: 20px;
   display: flex;
-  margin-left: 150px; 
+  margin-left: 30px;
+  margin-top: 50px;
   flex-direction: column;
   button {
     width: 30px;
@@ -117,7 +118,6 @@ export const StickyNotesAndFilter = styled.div`
   }
 `;
 
-
 export const LogoutButton = styled.button`
   position: absolute;
   bottom: 75px;
@@ -133,20 +133,6 @@ export const LogoutButton = styled.button`
   font-size: 14px;
   cursor: pointer;
 `;
-
-// export const UserProfile = styled.div`
-//   display: flex;
-//   align-items: center;
-//   img {
-//     width: 50px;
-//     height: 50px;
-//     border-radius: 50%;
-//   }
-//   p {
-//     margin-left: 10px;
-//     font-size: 14px;
-//   }
-// `;
 
 export const UserProfile = styled.div`
   display: flex;
@@ -165,7 +151,6 @@ export const UserTitle = styled.div`
   margin-top: 10px;
   color: black;
 `;
-
 
 export const SwimlaneContainer = styled.div`
   display: flex;
@@ -240,27 +225,17 @@ export const Container = styled.div`
   display: flex;
 `;
 
-export const SidebarContainer = styled.div`
-  width: 200px;
-  height: 100%;
-  background-color: #333;
-  color: #fff;
-  transition: width 0.5s ease;
 
-  /* hide the sidebar when it is collapsed */
-  ${props => props.isCollapsed && `
-    width: 0;
-    overflow: hidden;
-  `}
-`;
-
-export const ToggleButton = styled.button`
-  width: 50px;
-  height: 50px;
+export const AddButton = styled.button`
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 3px;
+  border-radius: 50%;
   background-color: #333;
   color: #fff;
   border: none;
-  border-radius: 5px;
-  font-size: 14px;
+  font-size: 18px;
   cursor: pointer;
 `;
+
