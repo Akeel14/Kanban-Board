@@ -1,4 +1,4 @@
-# Kanban App
+# Kanban Board
 A simple kanban app to manage tasks and projects using swimlanes.
 
 <img width="1440" alt="Screen Shot 2022-12-25 at 10 18 53 PM" src="https://user-images.githubusercontent.com/58542001/209496168-1671b8bf-48c0-481a-a52a-831772b9e933.png">
