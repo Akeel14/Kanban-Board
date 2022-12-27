@@ -78,7 +78,6 @@ export const TaskContainer = styled.div`
       background-color: white;
     }
   }
-
 `;
 
 export const TaskFormContainer = styled.form`

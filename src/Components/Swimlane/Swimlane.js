@@ -32,7 +32,6 @@ function Swimlane({
 
   const handleCancelEditTitle = () => {
     setIsEditingTitle(false);
-    
   };
   return (
     <SwimlaneContainer>
@@ -52,10 +51,16 @@ function Swimlane({
           <>
             <h3>{title}</h3>
             <button onClick={handleEditTitle}>
-              <img src="https://cdn.icon-icons.com/icons2/1511/PNG/512/pencileditblackcircularbuttoninterfacesymbol_104762.png" alt="Edit swimlane" />
+              <img
+                src="https://cdn.icon-icons.com/icons2/1511/PNG/512/pencileditblackcircularbuttoninterfacesymbol_104762.png"
+                alt="Edit swimlane"
+              />
             </button>
             <button onClick={() => onDelete(swimlane.id)}>
-              <img src="https://cdn-icons-png.flaticon.com/512/84/84462.png" alt="Delete swimlane" />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/84/84462.png"
+                alt="Delete swimlane"
+              />
             </button>
           </>
         )}
@@ -72,7 +77,6 @@ function Swimlane({
               onDeleteTask={onDeleteTask}
               onMoveTask={onMoveTask}
             />
-            
           ))}
         </TasksContainer>
       </SwimlaneBody>

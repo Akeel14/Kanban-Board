@@ -46,9 +46,7 @@ export const SidebarContent = styled.div`
     top: 50px;
     left: ${(props) => (props.isOpen ? "0" : "-100%")};
     transition: left 0.3s ease-out;
-    background-color: #ffffff;  /* add solid white background */
-
-
+    background-color: #ffffff;
   }
 `;
 

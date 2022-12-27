@@ -10,7 +10,6 @@ function Task({ task, swimlaneId, onUpdateTask, onDeleteTask }) {
     event.preventDefault();
     onUpdateTask(swimlaneId, task.id, { title, description });
     setIsEditing(false);
-
   };
 
   const handleEditTask = () => {
@@ -35,23 +34,35 @@ function Task({ task, swimlaneId, onUpdateTask, onDeleteTask }) {
             value={description}
             onChange={(event) => setDescription(event.target.value)}
           />
-          <button class="Update" type="submit">Update</button>
-          <button class="Cancel" onClick={handleCancelEditTask}>Cancel</button>
+          <button className="Update" type="submit">
+            Update
+          </button>
+          <button className ="Cancel" onClick={handleCancelEditTask}>
+            Cancel
+          </button>
         </TaskFormContainer>
       ) : (
         <>
-          <p class="title">{title}</p>
-          <p class="description">{description}</p>
-          <button class="edit-buttons" onClick={handleEditTask}>
-            <img src="https://cdn.icon-icons.com/icons2/1511/PNG/512/pencileditblackcircularbuttoninterfacesymbol_104762.png" alt="Edit task" />
+          <p className="title">{title}</p>
+          <p className="description">{description}</p>
+          <button className="edit-buttons" onClick={handleEditTask}>
+            <img
+              src="https://cdn.icon-icons.com/icons2/1511/PNG/512/pencileditblackcircularbuttoninterfacesymbol_104762.png"
+              alt="Edit task"
+            />
           </button>
-          <button class="delete-buttons" onClick={() => onDeleteTask(swimlaneId, task.id)}>
-            <img src="https://cdn-icons-png.flaticon.com/512/84/84462.png" alt="Delete task" />
+          <button
+            className="delete-buttons"
+            onClick={() => onDeleteTask(swimlaneId, task.id)}
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/84/84462.png"
+              alt="Delete task"
+            />
           </button>
         </>
       )}
     </TaskContainer>
-
   );
 }
 export default Task;

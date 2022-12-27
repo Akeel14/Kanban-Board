@@ -22,9 +22,3 @@ export const LogoutContainer = styled.div`
     }
   }
 `;
-
-
-
-
-
-

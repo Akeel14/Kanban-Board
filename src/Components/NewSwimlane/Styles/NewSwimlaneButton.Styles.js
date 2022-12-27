@@ -7,15 +7,15 @@ export const NewSwimlaneButtonContainer = styled.button`
   width: 150px;
   height: 50px;
   margin-top: 50vh;
-  border-radius:10px;
+  border-radius: 10px;
   background-color: #f2f2f2;
-  
+
   cursor: pointer;
   img {
     width: 20px;
     height: 20px;
   }
   &:hover {
-      background-color: #ccc;
-    }
+    background-color: #ccc;
+  }
 `;

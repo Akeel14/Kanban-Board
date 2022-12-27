@@ -9,7 +9,6 @@ export const SwimlaneContainer = styled.div`
   border: 1px solid #ccc;
   border-radius: 5px;
   overflow-x: scroll;
-
 `;
 
 export const SwimlaneHeader = styled.div`
@@ -19,7 +18,7 @@ export const SwimlaneHeader = styled.div`
   border-bottom: 1px solid #ccc;
   min-height: 50px;
   h3 {
-    flex:6;
+    flex: 6;
     margin: 0;
     padding: 0 20px;
     font-size: 18px;
@@ -27,12 +26,11 @@ export const SwimlaneHeader = styled.div`
     overflow: hidden;
   }
   button {
-    flex:1;
+    flex: 1;
     background: none;
     border: none;
     cursor: pointer;
     img {
- 
       width: 25px;
       height: 25px;
     }
@@ -50,4 +48,3 @@ export const TasksContainer = styled.div`
   overflow-y: scroll;
   height: calc(100% - 50px);
 `;
-

@@ -12,8 +12,8 @@ function Swimlanes() {
         {
           id: 1,
           title: "Project Proposal",
-          description: "Meet with the client to present the proposal and answer any questions they may have",
-         
+          description:
+            "Meet with the client to present the proposal and answer any questions they may have",
         },
       ],
     },
@@ -24,7 +24,8 @@ function Swimlanes() {
         {
           id: 2,
           title: "Write project proposal",
-          description: "Draft a detailed proposal for the project, including an overview of the project, a timeline, and a budget",
+          description:
+            "Draft a detailed proposal for the project, including an overview of the project, a timeline, and a budget",
         },
       ],
     },
@@ -38,7 +39,6 @@ function Swimlanes() {
           description:
             "Outline the steps and tasks required to complete the project, including deadlines and resources needed",
         },
-
       ],
     },
   ]);
