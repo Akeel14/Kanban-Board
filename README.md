@@ -9,7 +9,6 @@ This project is a simple task management web app that allows users to create and
 * Edit and delete tasks
 * Sign up and log in with email and password
 * Forgot password functionality
-* Data is saved and accessible upon log in
 
 # Technologies Used
 * ReactJS
